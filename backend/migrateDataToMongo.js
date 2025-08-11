@@ -55,13 +55,13 @@ async function migrateData() {
           "linkedinLink": "asffa",
           "instagramLink": "afsa",
           "twitterLink": "da",
-          "resumePdf": "https://portfolio-jipo.onrender.com/uploads/resume.pdf",
+          "resumePdf": "https://portfolio-5xxf.onrender.com/uploads/resume.pdf",
           "location": "Sanaa",
           "aboutMeText": "raad",
           "whoAmIText": "raad want to extend my current theme toggling (dark mode/light mode) by adding theme presets in the Admin Settings page.\nThere should be at least three predefined theme presets — each preset having a cohesive color palette.\n\nd",
           "footerCopyrightText": "@ 2025 Raad Alzaeem All Right Reserved",
           "footerDesignCreditText": "Designed with React",
-          "profileimage": "https://portfolio-jipo.onrender.com/uploads/profile-image-1745778390278-237421215.jpg",
+          "profileimage": "https://portfolio-5xxf.onrender.com/uploads/profile-image-1745778390278-237421215.jpg",
           "showInteractiveBalls": true
         },
         "users": [

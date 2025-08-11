@@ -106,7 +106,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [loading, setLoading] = useState(true);
 
   // const backendUrl = 'http://localhost:10000/data';
-  const backendUrl = 'https://portfolio-jipo.onrender.com/data';
+  const backendUrl = 'https://portfolio-5xxf.onrender.com/data';
 
   useEffect(() => {
     fetchInitialData();
