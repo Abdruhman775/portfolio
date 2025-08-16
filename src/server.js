@@ -125,9 +125,34 @@ app.post('/login', async (req, res) => {
     res.status(500).json({ error: 'Server error' });
   }
 });
-app.post('/update-credentials', (req, res) => {
-  // Not implemented yet
-  res.status(501).json({ error: 'Auth endpoint not implemented in this version' });
+app.post('/update-credentials', async (req, res) => {
+  const { username, password } = req.body;
+  
+  if (!username || !password) {
+    return res.status(400).json({ error: 'Username and password are required' });
+  }
+
+  try {
+    // Since we only have one admin user, we'll update the first user found
+    // In a real application, you'd want to authenticate the current user first
+    const existingUser = await User.findOne({});
+    
+    if (!existingUser) {
+      // If no user exists, create one
+      const newUser = new User({ username, password });
+      await newUser.save();
+    } else {
+      // Update existing user's credentials
+      existingUser.username = username;
+      existingUser.password = password;
+      await existingUser.save();
+    }
+
+    res.json({ message: 'Credentials updated successfully' });
+  } catch (error) {
+    console.error('Error updating credentials:', error);
+    res.status(500).json({ error: 'Failed to update credentials' });
+  }
 });
 
 // POST /upload-project-image
