@@ -57,7 +57,7 @@ const Portfolio: React.FC = () => {
   const { colors } = useTheme();
 
   useEffect(() => {
-    document.title = 'RAAD ALZAEEM';  // Change the title dynamically when the component is mounted
+    document.title = 'Abdruhman Jameel';  // Change the title dynamically when the component is mounted
   }, []);
 
   if (loading) {
