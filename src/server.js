@@ -125,6 +125,10 @@ app.post('/login', async (req, res) => {
     res.status(500).json({ error: 'Server error' });
   }
 });
+app.post('/update-credentials', (req, res) => {
+  // Not implemented yet
+  res.status(501).json({ error: 'Auth endpoint not implemented in this version' });
+});
 
 // POST /upload-project-image
 app.post('/upload-project-image', uploadProjectImage.single('projectImage'), (req, res) => {
